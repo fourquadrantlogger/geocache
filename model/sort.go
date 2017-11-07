@@ -2,8 +2,10 @@ package common
 
 import "sort"
 
-func map2slice(ps map[int]Location) {
-
+//LocationInfo 带信息的位置
+type LocationInfo struct {
+	Info map[string]interface{}
+	Location
 }
 
 //GEOKNN 根据球面距离公式
