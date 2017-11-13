@@ -2,19 +2,17 @@ package common
 
 import (
 	"fmt"
-	"math"
+
 	"testing"
 )
 
 func TestGEOdistance(t *testing.T) {
-	beijing := Location{116.5429835110, 39.7072013727}  //北京,39.7072013727,
-	shanghai := Location{121.5307607342, 31.1658172507} //上海,
+	beijing := Location{39.8999575057, 116.3871012193}  //北京
+	shanghai := Location{31.2081296333, 121.4813465878} //上海
 
-	fmt.Printf("%f\n", (180/math.Pi)*GEOangle(beijing, shanghai))
-	fmt.Printf("%f\n", GEOdistance(beijing, shanghai))
-	//
-	//fmt.Printf("%f\n",math.Sin(math.Pi))
-	//fmt.Printf("%f\n",math.Sin(math.Pi/4))
-	//fmt.Printf("%f\n",math.Sqrt(2)/2)
+	fmt.Printf("GEOangle=%f\n", GEOangle(beijing, shanghai))
+	fmt.Printf("GEOdistance=%f\n", GEOdistance(beijing, shanghai))
 
+	//output
+	//1035.722
 }
